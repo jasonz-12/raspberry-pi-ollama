@@ -1,5 +1,6 @@
 # raspberry-pi-ollama
 
+# LLM
 ## Install Ollama
 Use the command below to install Ollama CLI:
 ```{bash}
@@ -60,3 +61,28 @@ Use the `./llm.py` script - as an example python code, run it via:
 ```{bash}
 python llm.py
 ```
+
+# Text & Audio
+## Speech-to-Text (STT)
+Using OpenAI's `Whisper` model locally
+```{bash}
+python install whisper
+```
+And then run the following python script via
+```{bash}
+python whisper-transcribe.py
+```
+See below for the script's content - please make sure to use the **tiny** model
+```{python}
+import whisper
+
+# Load the model
+model = whisper.load_model("tiny")  # Options: tiny, base, small, medium, large
+
+# Transcribe an audio file
+result = model.transcribe("./audio/speech.mp3")  # Replace with your audio file path
+
+# Print the result
+print("Transcription:", result['text'])
+```
+***Pending: once confirmed that Raspberry Pi can take audio input we can integrate ffmpeg.***
