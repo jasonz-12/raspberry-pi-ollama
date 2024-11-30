@@ -1,2 +1,6 @@
 ollama
 whisper
+ffmpeg-python
+pyaudio
+TTS
+webrtcvad

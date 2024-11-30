@@ -1,1 +1,5 @@
 ollama-python/
+*.wav
+ChatTTS/
+audio/
+asset/
