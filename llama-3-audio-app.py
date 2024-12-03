@@ -34,7 +34,6 @@ while True:
     # Add the response to the conversation history
     conversation_history.append({'role': 'assistant', 'content': response_text})
 
-
     # Use the response to generate a TTS audio file
     try:
         # Initialize TTS
